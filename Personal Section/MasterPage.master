@@ -1,0 +1,113 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style5 {
+            width: 258px;
+            height: 44px;
+        }
+        .auto-style8 {
+            width: 464px;
+            height: 44px;
+        }
+        .auto-style9 {
+            width: 312px;
+            height: 44px;
+        }
+        .auto-style10 {
+            width: 258px;
+            height: 20px;
+        }
+        .auto-style11 {
+            width: 464px;
+            height: 20px;
+        }
+        .auto-style12 {
+            width: 258px;
+            height: 31px;
+        }
+        .auto-style13 {
+            width: 464px;
+            height: 31px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style5" style="top: auto; caption-side: top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <asp:Image ID="Image1" runat="server" Height="99px" ImageUrl="~/images/出版物1.jpg" Width="267px" />
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <p>
+                            &nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="37px" ImageUrl="~/images/Shopping_Cart.jpg" Width="30px" PostBackUrl="~/shoppingcart.aspx" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="37px" ImageUrl="~/images/Person.png" Width="41px" PostBackUrl="~/PersonalSec.aspx" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="37px" ImageUrl="~/images/Question.png" Width="35px" PostBackUrl="~/QandA.aspx" />
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12" style="top: auto; caption-side: top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/logout.aspx">[HyperLink1]</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server">[HyperLink2]</asp:HyperLink>
+                        <br />
+                        <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows" BackColor="Aqua" Font-Names="微軟正黑體" Font-Size="Large" Height="228px" Width="260px">
+                            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                            <Nodes>
+                                <asp:TreeNode Text="美食動態" Value="美食動態" NavigateUrl="~/Default.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="訂餐廳" Value="訂餐廳" NavigateUrl="~/預定餐廳.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="買餐券" Value="買餐券" NavigateUrl="~/Default.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="排行榜" Value="排行榜" NavigateUrl="~/十大排行.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="個人專區" Value="個人專區" NavigateUrl="~/PersonalSec.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="修改訂位" Value="修改訂位" NavigateUrl="~/修改訂位.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="常見問題" Value="常見問題" NavigateUrl="~/QandA.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="活動專區" Value="活動專區" NavigateUrl="~/Default.aspx"></asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                            <ParentNodeStyle Font-Bold="False" />
+                            <RootNodeStyle Font-Names="微軟正黑體" Font-Size="Large" ForeColor="Black" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                        <br />
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style13" colspan="2" style="font-family: 微軟正黑體; vertical-align: text-top;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10" style="top: auto; caption-side: top">
+                    &nbsp;</td>
+                <td class="auto-style11" colspan="2" style="font-family: 微軟正黑體; vertical-align: text-top;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
